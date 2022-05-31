@@ -1,22 +1,16 @@
 'use strict';
 
-let answer1 = prompt('Как называется ваш проект?', '"Project1" - обязательное поле* ');
-console.log(answer1);
-let title = answer1;
+let title = prompt('Как называется ваш проект?', '"Project1" - обязательное поле* ');
+console.log(title);
 
+let screens = prompt('Какие типы экранов нужно разработать?', 'Простые, Сложные, Интерактивные');
+console.log(screens);
 
-let answer2 = prompt('Какие типы экранов нужно разработать?', 'Простые, Сложные, Интерактивные');
-console.log(answer2);
-let screens = answer2;
+let screenPrice  = prompt('Сколько будет стоить данная работа?', '12000');
+console.log(screenPrice);
 
-let answer3 = prompt('Сколько будет стоить данная работа?', '12000');
-console.log(answer3);
-let screenPrice = answer3;
-
-let answer4 = confirm("Нужен ли адаптив на сайте?");
-console.log(answer4);
-let adaptive = answer4;
-
+let adaptiv = confirm("Нужен ли адаптив на сайте?");
+console.log(adaptive);
 
 let service1 = prompt('Какой дополнительный тип услуги нужен?');
 console.log(service1);
