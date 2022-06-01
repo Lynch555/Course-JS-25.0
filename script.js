@@ -9,7 +9,7 @@ console.log(screens);
 let screenPrice  = prompt('Сколько будет стоить данная работа?', '12000');
 console.log(screenPrice);
 
-let adaptiv = confirm("Нужен ли адаптив на сайте?");
+let adaptive = confirm("Нужен ли адаптив на сайте?");
 console.log(adaptive);
 
 let service1 = prompt('Какой дополнительный тип услуги нужен?');
