@@ -1,5 +1,7 @@
 ' use strict';
 
+let title = '"Project1" - обязательное поле* ';
+
 let getAllServicePrices = function (service1, service2) {
     return service1 + service2;
 };
@@ -13,11 +15,18 @@ function getFullPrice(screenPrice, allServicePrices) {
 }
 let fullPrice = getFullPrice(1000, 2000);
 
-let getTitle = ' title';
+const getTitle = function (title) {
+    let firstCharBig;
 
-getTitle = getTitle.replace(/^[^a-zа-яё]*([a-zа-яё])/i, function (m) {
-    return m.toUpperCase();
-});
+    do {
+        title = title.trim();
+    } while (title.indexOf(' ') === 0);
+
+    title = title.toLowerCase();
+    firstCharBig = title[0].toUpperCase();
+    title = title.replace(title[0], firstCharBig);
+    return title;
+};
 
 function getServicePercentPrices(fullPrice, rollback) {
     return fullPrice - rollback;
