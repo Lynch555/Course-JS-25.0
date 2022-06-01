@@ -31,7 +31,7 @@ const getTitle = function (title) {
 function getServicePercentPrices(fullPrice, rollback) {
     return fullPrice - rollback;
 }
-let servicePercentPrice = getFullPrice(fullPrice / 100 * 10));
+let servicePercentPrice = getFullPrice(fullPrice / 100 * 10);
 console.log(servicePercentPrice);
 
 console.log(allServicePrices);
