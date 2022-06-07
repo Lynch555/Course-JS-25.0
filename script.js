@@ -10,6 +10,29 @@ const appData = {
   allServicePrices: 0,
   servicePercentPrice: 0,
   services: {},
+  
+  start: function () {
+    appData.asking();
+    appData.addPrices();
+    appData.getFullPrice();
+    appData.getTitle(appData.title);
+    appData.getServicePercentPrices(appData.fullPrice, appData.rollback);
+
+    appData.logger();
+  },
+  logger: function () {
+    console.log(appData.fullPrice);
+    console.log(appData.servicePercentPrice);
+    console.log(appData.services);
+    console.log(appData.screens);
+
+    console.log(appData.screenPrice);
+
+    for (let key in appData) {
+      console.log("Ключ: " + key + " " + "Значение: " + appData[key]);
+    }
+  },
+  
   asking: function () {
 
     do {
@@ -93,27 +116,7 @@ const appData = {
       return "Что то пошло не так";
     }
   },
-  start: function () {
-    appData.asking();
-    appData.addPrices();
-    appData.getFullPrice();
-    appData.getTitle(appData.title);
-    appData.getServicePercentPrices(appData.fullPrice, appData.rollback);
-
-    appData.logger();
-  },
-  logger: function () {
-    console.log(appData.fullPrice);
-    console.log(appData.servicePercentPrice);
-    console.log(appData.services);
-    console.log(appData.screens);
-
-    console.log(appData.screenPrice);
-
-    for (let key in appData) {
-      console.log("Ключ: " + key + " " + "Значение: " + appData[key]);
-    }
-  }
+  
 };
 
 appData.start();
